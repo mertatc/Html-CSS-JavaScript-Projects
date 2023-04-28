@@ -24,7 +24,7 @@ body{
 }
 .progress-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /*bu komut ile aralarında boşluk oluşuyor*/
     position: relative;
     margin-bottom: 30px;
     width: 350px;
@@ -47,11 +47,49 @@ body{
 .progress{
     background-color: var(--line-border-fill);
     height: 4px;
-    width: 100%;
+    width: 0%;
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     z-index: -1;
     transition: 0.4s ease;
+}
+.circle{
+    background-color: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--line-border-empty);
+}
+
+.circle-active{
+    border-color: var(--line-border-fill);
+}
+
+.btn{
+    background-color: var(--line-border-fill);
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 24px;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:disabled{
+    background-color: var(--line-border-empty);
 }
