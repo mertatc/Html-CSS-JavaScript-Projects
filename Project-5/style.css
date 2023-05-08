@@ -13,7 +13,7 @@ body{
 .container{
     background-color: #fafafa;
     transform-origin: top left;
-    transition: tranform 0.5s linear;
+    transition: transform 0.5s linear;
     width: 100vw;
     min-height: 100vh;
     padding: 50px;
@@ -57,7 +57,7 @@ body{
     transform-origin: top left;
 }
 .container.show-nav .circle{
-    transform: rotate(70deg);
+    transform: rotate(-70deg);
 }
 
 .content{
@@ -71,6 +71,7 @@ body{
 
 .content small{
     color: #555;
+    font-style: italic;
 }
 .content p{
     color: #333;
