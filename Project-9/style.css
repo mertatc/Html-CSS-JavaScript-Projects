@@ -25,6 +25,29 @@ body{
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
-    border: var(--clr-neon) 4px solid;
+    border:currentColor 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
 
+    text-shadow: 
+    0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em currentColor ;
+
+    box-shadow: 
+    inset 0 0 0.5em 0 var(--clr-neon),
+    0 0 0.5em 0 var(--clr-neon) ;
+
+    position: relative;
+}
+.neon-button::before{
+    content: '';
+    position: absolute;
+    background: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(2em);
+    
 }
